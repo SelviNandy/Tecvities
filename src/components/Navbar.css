@@ -1,0 +1,119 @@
+/* ===== NAVBAR ===== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8%;
+    background: rgba(2, 6, 23, 0.2);
+    backdrop-filter: blur(6px);
+
+    transition: all 0.4s ease;
+    z-index: 9999;
+}
+
+/* SCROLL EFFECT */
+.navbar.scrolled {
+    background: rgba(2, 6, 23, 0.85);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+/* LOGO */
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: #38bdf8;
+    transition: 0.4s;
+}
+
+.navbar.scrolled .logo {
+    text-shadow: 0 0 12px #38bdf8;
+}
+
+/* NAV LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #38bdf8;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* HAMBURGER ANIMATION */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* MOBILE MENU */
+@media(max-width:768px) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background: #020617;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+        transition: 0.4s;
+    }
+
+    .nav-links.show {
+        right: 0;
+    }
+}

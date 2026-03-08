@@ -1,57 +1,78 @@
 .featured {
-    padding: 80px 8%;
-    background: #0f172a;
-    color: white;
-    text-align: center;
-}
-
-.featured h2 {
-    font-size: 42px;
-    margin-bottom: 60px;
-}
-
-.featured-container {
-    width: 100%;
-        max-width: 1100px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-}
-
-.featured-card {
-    background: linear-gradient(145deg, #1e293b, #0f172a);
-        padding: 40px 25px;
-        border-radius: 16px;
-        transition: 0.4s ease;
-        position: relative;
-        overflow: hidden;
+    min-height: 100vh;
+        /* full screen height */
+        width: 100%;
+    
+        padding: 100px 8%;
+        background: #020617;
+        color: white;
     
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: center;
+        /* vertical center */
+        /* horizontal center */
+    
+        box-sizing: border-box;
+}
+
+.featured-title {
+    font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 60px;
+        letter-spacing: 1px;
         text-align: center;
+}
+
+.featured-slider {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.featured-card {
+    width: 260px;
+    padding: 20px;
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    transition: 0.4s;
 }
 
 .featured-card img {
     width: 100%;
-    display: block;
-    transition: 0.5s;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.featured-card:hover img {
-    transform: scale(1.1);
+.featured-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
-.featured-content {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    transform: translateY(100%);
-    transition: 0.5s;
+.featured-card p {
+    color: #94a3b8;
+    font-size: 14px;
 }
 
-.featured-card:hover .featured-content {
-    transform: translateY(0);
+/* mobile */
+
+@media(max-width:768px) {
+
+    .featured-slider {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured-card {
+        width: 90%;
+    }
+
 }

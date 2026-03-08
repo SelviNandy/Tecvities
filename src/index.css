@@ -6,19 +6,24 @@
 
 body {
   overflow-x: hidden;
+  font-family: sans-serif;
 }
-.cursor-glow{
+.cursor-glow {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  pointer-events: none;
+
   background: radial-gradient(circle,
-      rgba(124,58,237,0.35),
-      transparent 60%);
-  filter: blur(60px);
+      rgba(59, 130, 246, 0.35) 0%,
+      rgba(59, 130, 246, 0.15) 40%,
+      transparent 70%);
+
+  pointer-events: none;
   transform: translate(-50%, -50%);
-  z-index: 0;
+  z-index: 99999;
 }
 
 body::before{
@@ -82,6 +87,7 @@ section {
   display: flex;
   align-items: center;
   position: relative;
+  z-index: 1;
 }
 .section-title {
   font-size: 2.5rem;
@@ -229,13 +235,14 @@ section {
 }
 .featured-card,
 .project-card {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: 0.8s ease;
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.6s ease;
 }
+
+/* animation class */
 
 .featured-card.active,
 .project-card.active {
-  opacity: 1;
-  transform: translateY(0);
+  transform: translateY(-10px);
 }

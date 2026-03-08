@@ -1,0 +1,42 @@
+#contact {
+    background: #020617;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.footer-container h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.social {
+    margin: 20px 0;
+}
+
+.social i {
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social i:hover {
+    color: #3b82f6;
+}
+
+.copy {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px) {
+
+    .footer-container h2 {
+        font-size: 24px;
+    }
+
+}

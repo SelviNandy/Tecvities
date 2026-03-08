@@ -23,7 +23,6 @@ export default function Navbar() {
 
       <div className="logo">NS Web Jovaza</div>
 
-      {/* Hamburger */}
       <div
         className={menuOpen ? "hamburger active" : "hamburger"}
         onClick={() => setMenuOpen(!menuOpen)}
@@ -33,7 +32,6 @@ export default function Navbar() {
         <span></span>
       </div>
 
-      {/* Menu */}
       <ul className={menuOpen ? "nav-links show" : "nav-links"}>
         <li><a href="#hero">Home</a></li>
         <li><a href="#services">Services</a></li>

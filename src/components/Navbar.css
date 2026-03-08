@@ -15,29 +15,26 @@
     background: rgba(2, 6, 23, 0.2);
     backdrop-filter: blur(6px);
 
-    transition: all 0.4s ease;
+    transition: 0.4s;
     z-index: 9999;
 }
 
-/* SCROLL EFFECT */
+/* Scroll effect */
+
 .navbar.scrolled {
-    background: rgba(2, 6, 23, 0.85);
-    backdrop-filter: blur(16px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    background: rgba(2, 6, 23, 0.9);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* LOGO */
+/* Logo */
+
 .logo {
     font-size: 22px;
     font-weight: 600;
     color: #38bdf8;
 }
 
-.navbar.scrolled .logo {
-    text-shadow: 0 0 12px #38bdf8;
-}
-
-/* NAV LINKS DESKTOP */
+/* Desktop menu */
 
 .nav-links {
     list-style: none;
@@ -66,7 +63,7 @@
     width: 100%;
 }
 
-/* HAMBURGER */
+/* Hamburger */
 
 .hamburger {
     display: none;
@@ -82,7 +79,7 @@
     transition: 0.4s;
 }
 
-/* HAMBURGER ANIMATION */
+/* Hamburger animation */
 
 .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);

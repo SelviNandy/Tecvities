@@ -71,7 +71,7 @@
 .project-img img {
     width: 100%;
     display: block;
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease;
 }
 
 .project-card:hover img {
@@ -148,7 +148,7 @@
     }
 
     .project-card {
-        min-width: 210px;
+        min-width: 200px;
     }
 
 }
@@ -179,7 +179,7 @@
     /* cards */
 
     .project-card {
-        min-width: 150px;
+        min-width: 130px;
     }
 
     .project-card h3 {
@@ -206,7 +206,7 @@
     }
 
     .project-card {
-        min-width: 180px;
+        min-width: 150px;
     }
 
 }

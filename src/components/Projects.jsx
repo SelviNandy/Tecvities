@@ -54,13 +54,7 @@ export default function Projects() {
     <section id="projects">
       <h2 className="projects-title">Our Projects</h2>
 
-      <div
-        className="projects-slider"
-        ref={trackRef}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-      >
+      <div className="projects-slider"ref={trackRef}onTouchStart={handleTouchStart}onTouchMove={handleTouchMove}onTouchEnd={handleTouchEnd}>
         <div className="slider-track">
           {projects.map((project, index) => (
             <div className="project-card" key={index}>

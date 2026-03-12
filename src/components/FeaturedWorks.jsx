@@ -41,7 +41,7 @@ export default function FeaturedWorks() {
 
     return () => clearInterval(slider);
 
-  }, []);
+  }, [works.length]);
 
 
   // always show 3 cards

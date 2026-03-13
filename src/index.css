@@ -246,3 +246,8 @@ section {
 .project-card.active {
   transform: translateY(-10px);
 }
+@media (max-width:768px) {
+  .cursor-glow {
+    display: none;
+  }
+}

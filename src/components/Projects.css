@@ -179,7 +179,7 @@
     /* cards */
 
     .project-card {
-        min-width: 100px;
+        min-width: 60px;
     }
 
     .project-card h3 {

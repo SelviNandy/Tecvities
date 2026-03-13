@@ -97,11 +97,22 @@
 
 @media (max-width:768px) {
 
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 10001;
+    }
+
+    /* MENU */
+
     .nav-links {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 60%;      /* full screen illa */
+        width: 60%;
         height: 100vh;
 
         background: #020617;
@@ -120,8 +131,9 @@
     .nav-links.show {
         right: 0;
     }
+
     .nav-links a {
         font-size: 20px;
     }
-}
 
+}

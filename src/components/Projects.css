@@ -180,6 +180,9 @@
 
     .project-card {
         min-width: 60px;
+        img{
+            width:60px
+        }
     }
 
     .project-card h3 {
